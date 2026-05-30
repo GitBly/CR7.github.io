@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CR7 PROJECT – Plan Integral 2025–2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --red: #C0392B;
+  --red-light: #e74c3c;
+  --gold: #D4A017;
+  --dark: #0a0a0a;
+  --navy: #1A3C5E;
+  --card-bg: var(--color-background-secondary, #f9f9f9);
+  --text: var(--color-text-primary, #111);
+  --muted: var(--color-text-secondary, #777);
+  --border: var(--color-border-tertiary, #e0e0e0);
+  --bg: var(--color-background-primary, #fff);
+}
+
+body { font-family: 'Barlow', sans-serif; background: var(--bg); }
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 200;
+  backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-logo-icon {
+  width: 32px; height: 32px;
+  background: var(--red);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-icon svg { width: 18px; height: 18px; fill: white; }
+
+.nav-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+
+.nav-tab {
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: var(--muted);
+  background: none;
+  transition: all 0.2s;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.5px;
+}
+.nav-tab:hover { color: var(--text); border-color: var(--border); background: var(--card-bg); }
+.nav-tab.active { background: var(--red); color: white; border-color: var(--red); }
+
+/* ── SECTIONS ── */
+.section { display: none; padding-bottom: 3rem; }
+.section.active { display: block; }
+.section-inner { padding: 24px 28px; max-width: 900px; margin: 0 auto; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+}
+
+.hero-bg-img {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=1200&q=80');
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.18;
+  filter: grayscale(30%);
+}
+
+.hero-stripe {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), #ff6b6b, var(--gold), var(--red));
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer { 0%{background-position:0% 0%} 100%{background-position:200% 0%} }
+
+.hero-bg-number {
+  position: absolute;
+  right: -20px; bottom: -20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 280px;
+  line-height: 1;
+  color: rgba(255,255,255,0.04);
+  user-select: none;
+  letter-spacing: -10px;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 48px 28px 36px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--red);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  line-height: 0.95;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin-top: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 0;
+  margin-top: 28px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  width: fit-content;
+}
+
+.hero-stat {
+  text-align: center;
+  padding: 14px 24px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.hero-stat:last-child { border-right: none; }
+
+.hero-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--red);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1px;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+/* ── SECTION HEADERS ── */
+.sec-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.sec-header-line {
+  width: 4px; height: 22px;
+  background: var(--red);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.sec-header-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.sec-header-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: auto;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ── AREA GRID ── */
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.area-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 18px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.area-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent, var(--red));
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+.area-card:hover::before, .area-card.selected::before { transform: scaleX(1); }
+.area-card:hover { border-color: var(--accent, var(--red)); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.area-card.selected { border-color: var(--accent, var(--red)); box-shadow: 0 0 0 2px rgba(192,57,43,0.12); }
+
+.area-icon { font-size: 26px; margin-bottom: 8px; display: block; }
+.area-title { font-size: 12px; font-weight: 700; color: var(--text); letter-spacing: 0.5px; }
+
+/* ── DETAIL BOX ── */
+.detail-box {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  animation: fadeUp 0.3s ease;
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.detail-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+.detail-item:last-child { border-bottom: none; }
+.bullet-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ── HOME: CR7 PHOTO BANNER ── */
+.cr7-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.cr7-banner-img {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 180px;
+  position: relative;
+}
+.cr7-banner-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s;
+}
+.cr7-banner-img:hover img { transform: scale(1.04); }
+.cr7-banner-img .img-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  padding: 24px 12px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── HOME: TEAM CARD ── */
+.team-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  margin-top: 16px;
+}
+.team-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.team-members { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.team-member { text-align: center; }
+.team-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  margin: 0 auto 8px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.team-avatar:hover { transform: scale(1.1); }
+.team-member-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.team-member-role { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* ── HOME: AREA QUICK CARDS (with colors) ── */
+.home-area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.home-area-card {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 18px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  background: var(--card-bg);
+  position: relative; overflow: hidden;
+}
+.home-area-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+.home-area-card .color-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: 12px 12px 0 0;
+}
+.home-area-card .area-icon { font-size: 26px; margin-bottom: 6px; display: block; }
+.home-area-card .area-title { font-size: 12px; font-weight: 700; color: var(--text); }
+
+/* ── SOCIAL: HASHTAG CLOUD ── */
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.hashtag {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hashtag:hover, .hashtag.active {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+.hashtag-info-box {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: var(--card-bg);
+  border-left: 3px solid var(--red);
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 48px;
+  animation: fadeUp 0.2s ease;
+}
+
+/* ── SOCIAL: NIKE COLLAB ── */
+.nike-section-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.nike-photo-strip {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.nike-photo-strip::-webkit-scrollbar { height: 4px; }
+.nike-photo-strip::-webkit-scrollbar-track { background: var(--border); border-radius: 2px; }
+.nike-photo-strip::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+.nike-photo {
+  flex-shrink: 0;
+  width: 120px; height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.nike-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(20%);
+  transition: filter 0.3s, transform 0.3s;
+}
+.nike-photo:hover img { filter: grayscale(0%); transform: scale(1.06); }
+.nike-photo .np-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 16px 6px 5px;
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 1px;
+}
+
+.nike-collab {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.nike-collab:hover { border-color: var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.nike-collab-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nike-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--red);
+  min-width: 28px;
+}
+.nike-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+}
+.nike-expand {
+  font-size: 13px;
+  color: var(--muted);
+  padding-top: 10px;
+  padding-left: 38px;
+  display: none;
+  line-height: 1.65;
+  animation: fadeUp 0.2s ease;
+}
+.nike-expand.open { display: block; }
+
+/* ── BITÁCORA ── */
+.month-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.month-btn {
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: none;
+  transition: all 0.2s;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.5px;
+}
+.month-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+.week-entry { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.week-entry:last-child { border-bottom: none; }
+.week-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.week-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  color: white; background: var(--red);
+  padding: 3px 10px; border-radius: 10px;
+}
+.week-tipo {
+  font-size: 10px; color: var(--muted); letter-spacing: 1px; font-weight: 600;
+  background: var(--card-bg); padding: 2px 8px; border-radius: 8px; border: 1px solid var(--border);
+}
+.week-text { font-size: 13px; color: var(--text); line-height: 1.65; }
+.week-pending { font-size: 12px; color: var(--red); margin-top: 8px; font-style: italic; padding-left: 12px; border-left: 2px solid var(--red); }
+
+/* KPI GRID */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 16px; }
+.kpi-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 14px 12px;
+  text-align: center;
+}
+.kpi-val { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--red); line-height: 1; }
+.kpi-label { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.3; font-weight: 500; }
+
+/* ── EVALUACIONES ── */
+.eval-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.eval-btn {
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--muted);
+  transition: all 0.2s;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.5px;
+}
+.eval-btn.active { background: var(--red); color: white; border-color: var(--red); }
+
+.person-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  margin-bottom: 16px;
+  animation: fadeUp 0.3s ease;
+}
+.person-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.person-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+.person-name { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 2px; color: var(--text); }
+.person-score { font-size: 12px; color: var(--muted); }
+.score-badge {
+  display: inline-block;
+  background: var(--red); color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px; padding: 2px 10px;
+  border-radius: 10px; margin-left: 6px;
+}
+.qa-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.qa-item:last-child { border-bottom: none; }
+.qa-q { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--red); margin-bottom: 6px; }
+.qa-a { font-size: 13px; color: var(--text); line-height: 1.65; }
+
+.star-row { display: flex; gap: 3px; }
+.star { color: #D4A017; font-size: 14px; }
+.star.empty { color: var(--border); }
+
+.co-eval-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 18px;
+  margin-bottom: 12px;
+  animation: fadeUp 0.25s ease;
+}
+.co-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.co-from { font-size: 11px; color: var(--muted); font-weight: 500; }
+.co-to { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; color: var(--text); }
+.co-score { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--red); }
+.co-row { display: flex; gap: 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.55; }
+.co-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--muted); min-width: 64px; padding-top: 2px; }
+.co-val { color: var(--text); flex: 1; }
+
+/* ── NIKE BADGE ── */
+.nike-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #111; color: white;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  nav { padding: 12px 16px; }
+  .nav-tabs { gap: 2px; }
+  .nav-tab { padding: 5px 10px; font-size: 11px; }
+  .hero-name { font-size: 48px; }
+  .hero-stats { flex-wrap: wrap; }
+  .hero-stat { padding: 12px 16px; }
+  .section-inner { padding: 16px; }
+  .cr7-banner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="site">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      </div>
+      CR7 PROJECT
+    </div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('home')">Inicio</button>
+      <button class="nav-tab" onclick="showSection('plan')">Plan Integral</button>
+      <button class="nav-tab" onclick="showSection('social')">Social Media</button>
+      <button class="nav-tab" onclick="showSection('bitacora')">Bitácora</button>
+      <button class="nav-tab" onclick="showSection('eval')">Evaluaciones</button>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HOME
+  ════════════════════════════════════════ -->
+  <div id="home" class="section active">
+
+    <!-- HERO OSCURO -->
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-bg-img"></div>
+      <div class="hero-stripe"></div>
+      <div class="hero-bg-number">CR7</div>
+      <div class="hero-content">
+        <div class="hero-tag">⚽ TEMPORADA 2025 – 2026</div>
+        <div class="hero-name">Cristiano<br>Ronaldo</div>
+        <div class="hero-sub">Plan Integral de Alto Rendimiento · Alonso · Joshua · Lewin</div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">5</div>
+            <div class="hero-stat-label">ÁREAS DEL PLAN</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">900M+</div>
+            <div class="hero-stat-label">SEGUIDORES</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">7</div>
+            <div class="hero-stat-label">GOLES Q1</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">40</div>
+            <div class="hero-stat-label">AÑOS ÉLITE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="section-inner">
+
+      <div class="sec-header">
+        <div class="sec-header-line"></div>
+        <div class="sec-header-title">GALERÍA CR7</div>
+        <div class="sec-header-sub">Temporada 2025–26</div>
+      </div>
+
+      <div class="cr7-banner">
+        <div class="cr7-banner-img" style="height:220px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/800px-Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo" loading="lazy">
+          <div class="img-label">CR7 · AL NASSR</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="cr7-banner-img" style="height:104px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Al_Hilal%2C_23_January_2023_%28cropped%29.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Al_Hilal%2C_23_January_2023_%28cropped%29.jpg" alt="CR7 Al Nassr" loading="lazy">
+            <div class="img-label">AL NASSR · SAUDI PRO LEAGUE</div>
+          </div>
+          <div class="cr7-banner-img" style="height:104px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Cristiano_Ronaldo_-_2015.jpg/800px-Cristiano_Ronaldo_-_2015.jpg" alt="CR7 celebration" loading="lazy">
+            <div class="img-label">SIUUU · CELEBRACIÓN ICÓNICA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÁREAS RÁPIDAS -->
+      <div class="sec-header" style="margin-top:24px;">
+        <div class="sec-header-line"></div>
+        <div class="sec-header-title">ÁREAS DEL PLAN</div>
+      </div>
+
+      <div class="home-area-grid">
+        <div class="home-area-card" onclick="showSection('plan'); selectArea('nutricion')">
+          <div class="color-bar" style="background:#27AE60;"></div>
+          <div class="area-icon">🥗</div>
+          <div class="area-title">Nutrición</div>
+        </div>
+        <div class="home-area-card" onclick="showSection('plan'); selectArea('fisica')">
+          <div class="color-bar" style="background:#2980B9;"></div>
+          <div class="area-icon">🏃</div>
+          <div class="area-title">Prep. Física</div>
+        </div>
+        <div class="home-area-card" onclick="showSection('plan'); selectArea('psico')">
+          <div class="color-bar" style="background:#8E44AD;"></div>
+          <div class="area-icon">🧠</div>
+          <div class="area-title">Psicología</div>
+        </div>
+        <div class="home-area-card" onclick="showSection('plan'); selectArea('manager')">
+          <div class="color-bar" style="background:#E67E22;"></div>
+          <div class="area-icon">💼</div>
+          <div class="area-title">Management</div>
+        </div>
+        <div class="home-area-card" onclick="showSection('social')">
+          <div class="color-bar" style="background:var(--red);"></div>
+          <div class="area-icon">📱</div>
+          <div class="area-title">Social Media</div>
+        </div>
+      </div>
+
+      <!-- EQUIPO -->
+      <div class="team-card">
+        <div class="team-title">EQUIPO MULTIDISCIPLINARIO</div>
+        <div class="team-members">
+          <div class="team-member">
+            <div class="team-avatar" style="background:var(--red); border-color:var(--red);">AL</div>
+            <div class="team-member-name">Alonso</div>
+            <div class="team-member-role">Nutrición & Física</div>
+          </div>
+          <div class="team-member">
+            <div class="team-avatar" style="background:#1A3C5E; border-color:#1A3C5E;">JO</div>
+            <div class="team-member-name">Joshua</div>
+            <div class="team-member-role">Social Media & Nike</div>
+          </div>
+          <div class="team-member">
+            <div class="team-avatar" style="background:#555; border-color:#555;">LE</div>
+            <div class="team-member-name">Lewin</div>
+            <div class="team-member-role">Coord. & Bitácora</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       PLAN INTEGRAL
+  ════════════════════════════════════════ -->
+  <div id="plan" class="section">
+    <div class="section-inner">
+      <div class="sec-header">
+        <div class="sec-header-line"></div>
+        <div class="sec-header-title">PLAN INTEGRAL</div>
+        <div class="sec-header-sub">Selecciona un área</div>
+      </div>
+      <div class="area-grid">
+        <div class="area-card" id="tab-nutricion" style="--accent:#27AE60" onclick="selectArea('nutricion')">
+          <div class="area-icon">🥗</div>
+          <div class="area-title">Nutrición</div>
+        </div>
+        <div class="area-card" id="tab-fisica" style="--accent:#2980B9" onclick="selectArea('fisica')">
+          <div class="area-icon">🏃</div>
+          <div class="area-title">Prep. Física</div>
+        </div>
+        <div class="area-card" id="tab-psico" style="--accent:#8E44AD" onclick="selectArea('psico')">
+          <div class="area-icon">🧠</div>
+          <div class="area-title">Psicología</div>
+        </div>
+        <div class="area-card" id="tab-manager" style="--accent:#E67E22" onclick="selectArea('manager')">
+          <div class="area-icon">💼</div>
+          <div class="area-title">Management</div>
+        </div>
+      </div>
+      <div id="plan-detail"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       SOCIAL MEDIA
+  ════════════════════════════════════════ -->
+  <div id="social" class="section">
+    <div class="section-inner">
+
+      <!-- HASHTAGS -->
+      <div class="sec-header">
+        <div class="sec-header-line"></div>
+        <div class="sec-header-title">HASHTAGS OFICIALES CR7</div>
+      </div>
+      <div class="detail-box" style="margin-bottom:16px;">
+        <div style="font-size:13px;color:var(--muted);margin-bottom:12px;">Toca un hashtag para ver su uso estratégico</div>
+        <div class="tag-cloud" id="hashtag-cloud"></div>
+        <div class="hashtag-info-box" id="hashtag-info">Selecciona un hashtag para ver su uso estratégico.</div>
+      </div>
+
+      <!-- NIKE COLLABS -->
+      <div class="sec-header" style="margin-top:8px;">
+        <div class="sec-header-line" style="background:#111;"></div>
+        <div class="sec-header-title">COLABORACIONES NIKE</div>
+        <div class="nike-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M21 8.7L5.4 15.2 3 11.4 16.6 6.8C18.3 6.2 20.3 7.1 21 8.7z"/></svg>
+          JUST DO IT
+        </div>
+      </div>
+
+      <!-- Fotos Nike/CR7 -->
+      <div class="nike-photo-strip">
+        <div class="nike-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/400px-Cristiano_Ronaldo_2018.jpg" alt="CR7 Nike" loading="lazy">
+          <div class="np-label">CR7 × NIKE</div>
+        </div>
+        <div class="nike-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Al_Hilal%2C_23_January_2023_%28cropped%29.jpg/400px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Al_Hilal%2C_23_January_2023_%28cropped%29.jpg" alt="CR7 en partido" loading="lazy">
+          <div class="np-label">AL NASSR</div>
+        </div>
+        <div class="nike-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Cristiano_Ronaldo_-_2015.jpg/400px-Cristiano_Ronaldo_-_2015.jpg" alt="CR7" loading="lazy">
+          <div class="np-label">NIKE TRAINING</div>
+        </div>
+        <div class="nike-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/400px-Cristiano_Ronaldo_2018.jpg" alt="CR7 Beyond Limits" loading="lazy" style="object-position: 30% top;">
+          <div class="np-label">BEYOND LIMITS</div>
+        </div>
+        <div class="nike-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Al_Hilal%2C_23_January_2023_%28cropped%29.jpg/400px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Al_Hilal%2C_23_January_2023_%28cropped%29.jpg" alt="CR7 Superfly" loading="lazy">
+          <div class="np-label">SUPERFLY DROP</div>
+        </div>
+      </div>
+
+      <div class="detail-box">
+        <div id="nike-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       BITÁCORA
+  ════════════════════════════════════════ -->
+  <div id="bitacora" class="section">
+    <div class="section-inner">
+      <div class="sec-header">
+        <div class="sec-header-line" style="background:var(--navy);"></div>
+        <div class="sec-header-title">BITÁCORA</div>
+        <div class="sec-header-sub">Julio – Septiembre 2025</div>
+      </div>
+      <div class="month-tabs">
+        <button class="month-btn active" onclick="showMonth('jul')">Julio 2025</button>
+        <button class="month-btn" onclick="showMonth('ago')">Agosto 2025</button>
+        <button class="month-btn" onclick="showMonth('sep')">Septiembre 2025</button>
+      </div>
+      <div id="bitacora-content"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       EVALUACIONES
+  ════════════════════════════════════════ -->
+  <div id="eval" class="section">
+    <div class="section-inner">
+      <div class="sec-header">
+        <div class="sec-header-line"></div>
+        <div class="sec-header-title">EVALUACIONES</div>
+      </div>
+      <div class="eval-tabs">
+        <button class="eval-btn active" onclick="showEval('auto')">Autoevaluación</button>
+        <button class="eval-btn" onclick="showEval('co')">Co-evaluación</button>
+      </div>
+      <div id="eval-auto">
+        <div class="eval-tabs" style="margin-bottom:16px;">
+          <button class="eval-btn active" onclick="showPerson('alonso')">Alonso</button>
+          <button class="eval-btn" onclick="showPerson('joshua')">Joshua</button>
+          <button class="eval-btn" onclick="showPerson('lewin')">Lewin</button>
+        </div>
+        <div id="person-detail"></div>
+      </div>
+      <div id="eval-co" style="display:none;"></div>
+    </div>
+  </div>
+
+</div><!-- .site -->
+
+<script>
+const planData = {
+  nutricion: {
+    title: "Nutrición",
+    color: "#27AE60",
+    items: [
+      "Proteínas 30% — 220 a 250 g/día para mantenimiento de masa muscular a los 40 años.",
+      "Carbohidratos 45% — sube de 350 g a 420 g en días de partido para máxima energía disponible.",
+      "Grasas saludables 25% — 80 a 100 g/día enfocadas en omega-3 para articulaciones.",
+      "Desayuno 7am: huevos, avena, frutas y agua alcalina. Almuerzo: pollo, arroz integral y ensalada mediterránea.",
+      "Cena: salmón al horno, batata y vegetales al vapor. Opcional nocturno: requesón con miel.",
+      "Suplementos: creatina 5g/día, omega-3 3g/día, Vitamina D3+K2 y magnesio glicinato.",
+      "Meta de hidratación: 3.5 a 4 litros diarios. Prohibido: alcohol, azúcar refinada y ultraprocesados.",
+      "Protocolo de carga de glucógeno 48 horas antes de partidos importantes — validado en septiembre con CR7."
+    ]
+  },
+  fisica: {
+    title: "Preparación Física",
+    color: "#2980B9",
+    items: [
+      "Lunes: fuerza tren inferior (sentadillas, peso muerto) + técnica de regate en campo.",
+      "Martes: velocidad y pliometría, sprints de 10 a 40m + crioterapia y masaje deportivo.",
+      "Miércoles: táctica colectiva + yoga y movilidad por 45 minutos.",
+      "Jueves: fuerza tren superior y core funcional + trabajo aéreo y centros.",
+      "Viernes: activación pre-partido (rondos, transiciones) + hidroterapia.",
+      "Sábado: partido oficial + recuperación inmediata con baño de hielo y estiramientos.",
+      "Domingo: descanso activo con caminata de 30 min + meditación.",
+      "Monitoreo GPS en cada entrenamiento para controlar carga, distancia y aceleraciones.",
+      "Análisis biomecánico mensual para ajustar técnica de carrera y reducir desgaste articular."
+    ]
+  },
+  psico: {
+    title: "Psicología del Deporte",
+    color: "#8E44AD",
+    items: [
+      "Visualización de rendimiento 15 minutos diarios — escenarios de goles, penales y situaciones de presión.",
+      "Secuencia fija de preparación mental en los 90 minutos previos a cada partido.",
+      "Simulacros de conferencia de prensa cada 15 días para gestión de medios.",
+      "Protocolo de 48 horas sin revisión de redes propias antes de partidos importantes.",
+      "Equipo de management filtra noticias negativas del entorno directo de CR7.",
+      "Sesiones mensuales de revisión de propósito y metas post-carrera.",
+      "Trabajo de identidad más allá del fútbol: padre, empresario y referente social.",
+      "Crisis de septiembre resuelta exitosamente: post motivacional llegó a 12 millones de likes."
+    ]
+  },
+  manager: {
+    title: "Management",
+    color: "#E67E22",
+    items: [
+      "11 contratos de endorsement activos gestionados simultáneamente con revisión trimestral.",
+      "Extensión del contrato Nike firmada: 2 temporadas más con 15% de aumento en tarifa digital.",
+      "Cláusula especial incluida para colección de Ramadán 2026 con Nike.",
+      "CR7 Fragancias: lanzamiento de línea limitada en colaboración con Nike Sport Scent.",
+      "Pestana CR7 Hotels: expansión de 7 a 10 propiedades globales.",
+      "Academia de fútbol nueva en Arabia Saudita — apertura planificada para 2026.",
+      "Colaboración con EA Sports FC para campaña de lanzamiento en proceso.",
+      "Ventana de retiro estimada: temporada 2026-2027. Transición a embajador FIFA y proyecto propio."
+    ]
+  }
+};
+
+const hashtags = [
+  { tag: "#CR7", uso: "Va en prácticamente todo. Es la firma de marca y ancla todos los posts de rendimiento. Sin este hashtag no existe el contenido de CR7." },
+  { tag: "#SiuuU", uso: "El grito icónico. Se usa para celebraciones, goles y momentos de euforia. Alta viralidad garantizada." },
+  { tag: "#NikeCR7", uso: "Exclusivo para contenido de colaboración con Nike. No se usa en posts generales para que no pierda peso." },
+  { tag: "#CR7xNike", uso: "Lanzamientos de colecciones y drops. Genera tendencia global en minutos cuando hay un reveal." },
+  { tag: "#NeverStop", uso: "Contenido de entrenamiento, esfuerzo y superación. Conecta con la narrativa de CR7 a los 40 años." },
+  { tag: "#GoalMachine", uso: "Se activa cuando hay hitos de goles. Especialmente potente cuando rompe récords." },
+  { tag: "#CR7Family", uso: "Contenido familiar y humano. El lado más cercano y emocional de la marca." },
+  { tag: "#CR7Challenge", uso: "Retos virales donde los fans participan. Genera millones de videos de respuesta en TikTok." },
+  { tag: "#BeyondLimitsCR7", uso: "Hashtag exclusivo de la colección de septiembre con Nike. Shooting realizado en Riyadh." },
+  { tag: "#AlNassr", uso: "Para conectar con el mercado árabe local y la afición del club en Arabia Saudita." }
+];
+
+const nikeCollabs = [
+  { name: "Drop Reveals", desc: "Lanzamientos de botas y colecciones con cuenta regresiva simultánea en Instagram, TikTok y X. El reveal de julio generó 48 millones de impresiones en 72 horas." },
+  { name: "Nike Training Series", desc: "Videos de entrenamiento reales con indumentaria Nike de manera orgánica. El Episodio 1 en YouTube alcanzó 8.2 millones de vistas en 48 horas. Hashtag: #NikeTraining." },
+  { name: "Nike Living Room", desc: "Minidocumentales de 3 a 5 minutos mostrando el día a día de CR7 con productos Nike integrados de manera natural. Alta credibilidad por no sentirse como un anuncio." },
+  { name: "Behind the Boots", desc: "Serie exclusiva mostrando el proceso de diseño de las botas CR7, con visitas a laboratorios de Nike. Alta viralidad por el acceso detrás de cámaras." },
+  { name: "CR7xNike Challenges", desc: "Retos en TikTok e Instagram Reels donde los fans imitan habilidades técnicas con botas Nike. Hashtag: #CR7xNikeChallenge. Participación masiva garantizada." },
+  { name: "Colecciones Temáticas", desc: "Mínimo 4 lanzamientos anuales. La más importante próxima: colección de Ramadán 2026 ya en proceso de diseño con cláusula en el contrato firmado." },
+  { name: "Co-branding Social", desc: "Campañas Nike + Fundación CR7 para educación deportiva infantil. Hashtags: #NikeForChange #CR7Foundation. Le da un lado humano y social a la marca." }
+];
+
+const bitacoraData = {
+  jul: {
+    fase: "Inicio de Pretemporada — Arranque del Plan Integral",
+    kpis: [
+      { val: "94%", label: "Adherencia nutricional" },
+      { val: "55", label: "VO2 máx (ml/kg/min)" },
+      { val: "7.2%", label: "% grasa corporal" },
+      { val: "+4.2M", label: "Nuevos seguidores" },
+      { val: "48M", label: "Impresiones reveal Nike" },
+      { val: "11", label: "Contratos activos" }
+    ],
+    semanas: [
+      { label: "Semana 1", tipo: "REUNIÓN INAUGURAL", texto: "Alonso, Joshua y Lewin presentan el Plan Integral al equipo de CR7. Se validan todas las áreas y se define el calendario de revisiones mensuales. CR7 asiste y llega con preguntas concretas sobre nutrición y psicología. Cada integrante toma su área asignada.", pendiente: "Pendiente: entregar KPIs individuales para la siguiente semana." },
+      { label: "Semana 2", tipo: "TEST FÍSICO", texto: "Lewin coordina la evaluación biomecánica. VO2 máx de 55 ml/kg/min y grasa en 7.2%. Alonso ajusta el plan nutricional con los datos en mano y se instalan los sensores GPS en las instalaciones.", pendiente: "Pendiente: repetir test en semana 4 para verificar adaptación." },
+      { label: "Semana 3", tipo: "SESIÓN PSICOLOGÍA", texto: "CR7 define sus tres metas personales de la temporada en sesión individual. Se diseña la rutina de activación mental pre-partido. Joshua registra el acuerdo del uso de la app de visualización en audio.", pendiente: "Pendiente: primera evaluación CSAI-2R en la primera semana de agosto." },
+      { label: "Semana 4", tipo: "LANZAMIENTO REDES", texto: "Joshua lidera el lanzamiento de #CR7Season26. El reveal de las botas Nike Superfly genera 48 millones de impresiones en 72 horas. #NikeCR7 y #CR7Season26 entran en tendencia global. Alonso documenta el hito.", pendiente: "Pendiente: coordinar calendar de drops Nike del segundo semestre." }
+    ]
+  },
+  ago: {
+    fase: "Pretemporada Avanzada — Primeros Partidos Oficiales",
+    kpis: [
+      { val: "5 días", label: "Recuperación lesión" },
+      { val: "100%", label: "Adherencia visualización" },
+      { val: "8.2M", label: "Views YouTube Ep. 1" },
+      { val: "180M", label: "Impresiones Nike agosto" },
+      { val: "+15%", label: "Aumento tarifa Nike" },
+      { val: "2 temp.", label: "Extensión Nike firmada" }
+    ],
+    semanas: [
+      { label: "Semana 1", tipo: "REVISIÓN MENSUAL", texto: "Videollamada de revisión de KPIs de julio. Alta satisfacción general. Se detecta ligera tensión muscular en isquiotibiales de CR7. El grupo acuerda reducir la carga de velocidad esa semana y programar crioterapia adicional.", pendiente: "Pendiente: monitoreo GPS intensificado las próximas 3 semanas." },
+      { label: "Semana 2", tipo: "GESTIÓN DE LESIÓN", texto: "Ecografía confirma tensión grado 1, sin rotura. Recuperación en 5 días con protocolo de electroestimulación y crioterapia. Joshua coordina que nada salga en redes. Alonso coordinó con el equipo médico de Al Nassr. Sin impacto en partidos.", pendiente: "Pendiente: no publicar nada relacionado con la lesión. Comunicación controlada." },
+      { label: "Semana 3", tipo: "LANZAMIENTO YOUTUBE", texto: "Joshua documenta el hito del mes: el video Nike Training Ep.1 alcanza 8.2 millones de vistas en 48 horas. Los hashtags #CR7xNike y #NikeTraining suman 180 millones de impresiones combinadas. Nike confirma que superó sus expectativas internas.", pendiente: "Pendiente: Alonso propone clips de 60 segundos para TikTok de cada episodio." },
+      { label: "Semana 4", tipo: "NEGOCIACIÓN NIKE", texto: "Lewin registra el resultado: extensión del contrato Nike por 2 temporadas más con aumento del 15% en tarifa de social media. Cláusula especial para colección Ramadán 2026. Se aprueba colaboración con EA Sports FC.", pendiente: "Pendiente: finalizar términos legales antes del 15 de septiembre." }
+    ]
+  },
+  sep: {
+    fase: "Temporada Regular — Consolidación del Plan",
+    kpis: [
+      { val: "7 goles", label: "En 5 partidos" },
+      { val: "56.5", label: "VO2 máx mejorado" },
+      { val: "7.0%", label: "% grasa (baja)" },
+      { val: "12M", label: "Likes post crisis" },
+      { val: "+11M", label: "Seguidores Q1" },
+      { val: "Q1 ✓", label: "Todos KPIs en verde" }
+    ],
+    semanas: [
+      { label: "Semana 1", tipo: "EVALUACIÓN Q1", texto: "Reunión presencial en Riyadh. CR7 ha marcado 7 goles en 5 partidos. VO2 máx sube a 56.5 y grasa baja a 7.0%. Social media acumula +11M seguidores en el trimestre. Alonso, Joshua y Lewin presentan el informe Q1 conjuntamente. Alta satisfacción del equipo completo.", pendiente: "Pendiente: preparar informe Q1 para patrocinadores." },
+      { label: "Semana 2", tipo: "CRISIS MEDIÁTICA", texto: "Oleada de críticas tras un partido sin gol. Lewin activa el protocolo de desconexión 48 horas. Joshua modera comentarios en todas las plataformas. Alonso propone la estrategia del post de respuesta. El mensaje motivacional de CR7 llega a 12 millones de likes.", pendiente: "Pendiente: establecer protocolo de crisis de imagen formal para el resto de la temporada." },
+      { label: "Semana 3", tipo: "SHOOTING NIKE", texto: "Joshua coordina el shooting de la colección Beyond Limits en Riyadh: 3 spots, 12 fotos para Instagram y contenido para TikTok. El hashtag #BeyondLimitsCR7 lo definen los tres en una llamada rápida. Lanzamiento programado para octubre.", pendiente: "Pendiente: Lewin coordina ventana de exclusividad con management." },
+      { label: "Semana 4", tipo: "AJUSTE NUTRICIONAL", texto: "Alonso implementa los cambios aprobados: carbohidratos en días de partido suben a 420g y se introduce la carga de glucógeno 48 horas antes de partidos importantes. CR7 reporta mejor energía en el segundo tiempo.", pendiente: "Pendiente: seguimiento semanal de datos energéticos durante octubre." }
+    ]
+  }
+};
+
+const autoEvalData = {
+  alonso: {
+    score: "8/10", stars: 8, color: "var(--red)",
+    qa: [
+      { q: "¿QUÉ APORTASTE?", a: "Me encargué de que el plan nutricional tuviera sentido real, aplicado a sus horarios. El momento que más me representa es agosto con la lesión: actué rápido, coordiné con el médico y CR7 estuvo de vuelta en 5 días sin que nadie se enterara." },
+      { q: "¿QUÉ FUE LO MÁS DIFÍCIL?", a: "La semana de la lesión. Fue el momento donde sentí más presión. Tuve que actuar rápido con personas que no conocía bien todavía y mantener la calma para no alarmar al grupo." },
+      { q: "¿QUÉ HARÍAS DIFERENTE?", a: "Hubiera establecido desde el inicio un sistema de alertas más claro para señales físicas de riesgo. También me hubiera coordinado más con Joshua para que el contenido de entrenamiento reflejara mejor lo que estábamos haciendo físicamente." },
+      { q: "¿POR QUÉ ESA NOTA?", a: "Cumplí bien mi rol y tomé decisiones importantes en momentos de presión. Me quito dos puntos porque me desconecté un poco de las conversaciones de redes y management en algunas semanas." }
+    ]
+  },
+  joshua: {
+    score: "8.5/10", stars: 9, color: "#1A3C5E",
+    qa: [
+      { q: "¿QUÉ APORTASTE?", a: "Llevé todo lo de social media y la relación con Nike. El momento que más me representa son los 8.2 millones de vistas del episodio 1 de NikeTraining en 48 horas. Eso fue producto de mucha planificación que nadie ve." },
+      { q: "¿QUÉ FUE LO MÁS DIFÍCIL?", a: "La crisis de septiembre. En redes todo pasa rapidísimo y tienes que tomar decisiones de comunicación en minutos. Que el post terminara con 12 millones de likes fue un alivio enorme, pero en el momento fue mucha presión." },
+      { q: "¿QUÉ HARÍAS DIFERENTE?", a: "Hubiera creado desde el inicio un banco de contenido de emergencia, es decir, posts listos para semanas de crisis. En agosto tuvimos que improvisar bastante el contenido porque no podíamos mostrar nada de la lesión." },
+      { q: "¿POR QUÉ ESA NOTA?", a: "Los resultados de social media fueron excepcionales y eso habla de trabajo constante. Me quito punto y medio porque en algunas semanas dejé la bitácora de lado y Lewin tuvo que cubrirme más de una vez." }
+    ]
+  },
+  lewin: {
+    score: "8/10", stars: 8, color: "#555",
+    qa: [
+      { q: "¿QUÉ APORTASTE?", a: "Mantuve todo conectado. Llevé la bitácora, coordiné las reuniones, manejé psicología y management. No es el rol más visible pero sin eso el equipo funciona con mucho menos claridad." },
+      { q: "¿QUÉ FUE LO MÁS DIFÍCIL?", a: "Manejar varias cosas al mismo tiempo sin que ninguna se descuidara. Agosto fue especialmente intenso: lesión, negociación Nike y bitácora atrasada al mismo tiempo." },
+      { q: "¿QUÉ HARÍAS DIFERENTE?", a: "Hubiera definido mejor desde el inicio los roles en situación de emergencia. En agosto los tres reaccionamos al mismo tiempo y hubo un momento de confusión sobre quién tomaba la delantera." },
+      { q: "¿POR QUÉ ESA NOTA?", a: "El equipo estuvo ordenado gracias en parte a mi coordinación. Me quito dos puntos porque a veces me concentré tanto en organizar que no propuse suficiente desde lo creativo." }
+    ]
+  }
+};
+
+const coEvalData = [
+  { de: "Alonso evalúa a", a: "Joshua", score: "9/10", destaca: "Su rapidez para reaccionar. No se paraliza en las crisis, empieza a buscar soluciones de inmediato.", mejora: "A veces se mete tanto en su área que pierde de vista lo que pasa en las otras. Hay semanas donde tuve que actualizarlo yo." },
+  { de: "Alonso evalúa a", a: "Lewin", score: "8.5/10", destaca: "Su calma. En los momentos de presión, como agosto con la lesión, Lewin nunca entró en pánico.", mejora: "Se queda demasiado en el rol de coordinador. Tiene buenas ideas pero le cuesta meterlas a la conversación con fuerza." },
+  { de: "Joshua evalúa a", a: "Alonso", score: "9/10", destaca: "Su seriedad con los datos. No toma decisiones por intuición, siempre tiene un número o resultado detrás.", mejora: "Que se involucre más en las conversaciones de redes. Los logros del área física no siempre se comunican bien digitalmente porque él no está en esa conversación." },
+  { de: "Joshua evalúa a", a: "Lewin", score: "8.5/10", destaca: "Su capacidad de escuchar antes de hablar. Deja que todos digan su parte antes de dar su opinión.", mejora: "Que confíe más en sus ideas. Las presenta como sugerencias tentativas cuando deberían sonar con más convicción." },
+  { de: "Lewin evalúa a", a: "Alonso", score: "9/10", destaca: "Su disposición para actuar bajo presión. En agosto fue el primero en poner orden cuando llegó la noticia de la lesión.", mejora: "La comunicación interna cuando está muy metido en su área. Tomó decisiones de ajuste y nos enteramos después." },
+  { de: "Lewin evalúa a", a: "Joshua", score: "9/10", destaca: "Su creatividad para ver oportunidades donde otros ven problemas. En la crisis de septiembre propuso el post que terminó siendo el más exitoso del trimestre.", mejora: "El orden en la documentación. Le cuesta registrar lo que hace y más de una vez tuve que pedirle la info para la bitácora." }
+];
+
+/* ── NAVIGATION ── */
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const tabs = document.querySelectorAll('.nav-tab');
+  const map = { home: 0, plan: 1, social: 2, bitacora: 3, eval: 4 };
+  if (map[id] !== undefined) tabs[map[id]].classList.add('active');
+  if (id === 'social') renderSocial();
+  if (id === 'bitacora') showMonth('jul');
+  if (id === 'eval') { showEval('auto'); showPerson('alonso'); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ── PLAN ── */
+function selectArea(area) {
+  document.querySelectorAll('.area-card').forEach(c => c.classList.remove('selected'));
+  const tab = document.getElementById('tab-' + area);
+  if (tab) tab.classList.add('selected');
+  const d = planData[area];
+  const html = `<div class="detail-box">
+    <div class="detail-title" style="color:${d.color}">${d.title}</div>
+    ${d.items.map(i => `<div class="detail-item"><div class="bullet-dot" style="background:${d.color}"></div><div>${i}</div></div>`).join('')}
+  </div>`;
+  document.getElementById('plan-detail').innerHTML = html;
+}
+
+/* ── SOCIAL ── */
+function renderSocial() {
+  const cloud = document.getElementById('hashtag-cloud');
+  cloud.innerHTML = hashtags.map((h, i) => `<span class="hashtag" onclick="showHashtag(${i})">${h.tag}</span>`).join('');
+  document.getElementById('hashtag-info').textContent = 'Selecciona un hashtag para ver su uso estratégico.';
+
+  const nikeList = document.getElementById('nike-list');
+  nikeList.innerHTML = nikeCollabs.map((n, i) => `
+    <div class="nike-collab" onclick="toggleNike(${i})">
+      <div class="nike-collab-header">
+        <div class="nike-num">${String(i+1).padStart(2,'0')}</div>
+        <div class="nike-name">${n.name}</div>
+        <i class="ti ti-chevron-down" style="color:var(--muted);font-size:16px;"></i>
+      </div>
+      <div class="nike-expand" id="nike-${i}">${n.desc}</div>
+    </div>
+  `).join('');
+}
+
+function showHashtag(i) {
+  document.querySelectorAll('.hashtag').forEach((h, j) => h.classList.toggle('active', j === i));
+  document.getElementById('hashtag-info').textContent = hashtags[i].uso;
+}
+
+function toggleNike(i) {
+  document.getElementById('nike-' + i).classList.toggle('open');
+}
+
+/* ── BITÁCORA ── */
+function showMonth(m) {
+  document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+  const idx = { jul: 0, ago: 1, sep: 2 };
+  document.querySelectorAll('.month-btn')[idx[m]].classList.add('active');
+  const d = bitacoraData[m];
+  let html = `<div style="font-size:13px;color:var(--muted);margin-bottom:16px;font-style:italic;padding-left:4px;">${d.fase}</div>`;
+  html += `<div class="detail-box" style="margin-bottom:16px;">`;
+  d.semanas.forEach(s => {
+    html += `<div class="week-entry">
+      <div class="week-header">
+        <span class="week-label">${s.label}</span>
+        <span class="week-tipo">${s.tipo}</span>
+      </div>
+      <div class="week-text">${s.texto}</div>
+      <div class="week-pending">${s.pendiente}</div>
+    </div>`;
+  });
+  html += `</div>`;
+  html += `<div class="kpi-grid">`;
+  d.kpis.forEach(k => {
+    html += `<div class="kpi-card"><div class="kpi-val">${k.val}</div><div class="kpi-label">${k.label}</div></div>`;
+  });
+  html += `</div>`;
+  document.getElementById('bitacora-content').innerHTML = html;
+}
+
+/* ── EVALUACIONES ── */
+function showEval(type) {
+  document.querySelectorAll('.eval-btn').forEach((b, i) => {
+    if (i < 2) b.classList.toggle('active', (type === 'auto' && i === 0) || (type === 'co' && i === 1));
+  });
+  document.getElementById('eval-auto').style.display = type === 'auto' ? 'block' : 'none';
+  document.getElementById('eval-co').style.display = type === 'co' ? 'block' : 'none';
+  if (type === 'co') renderCoEval();
+  if (type === 'auto') showPerson('alonso');
+}
+
+function showPerson(p) {
+  const btns = document.querySelectorAll('#eval-auto .eval-btn');
+  const map = { alonso: 0, joshua: 1, lewin: 2 };
+  btns.forEach((b, i) => b.classList.toggle('active', i === map[p]));
+  const d = autoEvalData[p];
+  const stars = Array.from({length: 10}, (_, i) => `<span class="star ${i < d.stars ? '' : 'empty'}">★</span>`).join('');
+  const html = `<div class="person-card">
+    <div class="person-header">
+      <div class="person-avatar" style="background:${d.color}">${p.substring(0,2).toUpperCase()}</div>
+      <div>
+        <div class="person-name">${p.charAt(0).toUpperCase() + p.slice(1)}</div>
+        <div class="person-score">Autoevaluación <span class="score-badge">${d.score}</span></div>
+        <div class="star-row" style="margin-top:6px;">${stars}</div>
+      </div>
+    </div>
+    ${d.qa.map(q => `<div class="qa-item"><div class="qa-q">${q.q}</div><div class="qa-a">${q.a}</div></div>`).join('')}
+  </div>`;
+  document.getElementById('person-detail').innerHTML = html;
+}
+
+function renderCoEval() {
+  const html = coEvalData.map(c => `
+    <div class="co-eval-card">
+      <div class="co-header">
+        <div>
+          <div class="co-from">${c.de}</div>
+          <div class="co-to">${c.a}</div>
+        </div>
+        <div class="co-score">${c.score}</div>
+      </div>
+      <div class="co-row"><div class="co-tag">DESTACA</div><div class="co-val">${c.destaca}</div></div>
+      <div class="co-row"><div class="co-tag">MEJORAR</div><div class="co-val">${c.mejora}</div></div>
+    </div>
+  `).join('');
+  document.getElementById('eval-co').innerHTML = html;
+}
+
+// Init
+selectArea('nutricion');
+renderSocial();
+showMonth('jul');
+showPerson('alonso');
+</script>
+</body>
+</html>
